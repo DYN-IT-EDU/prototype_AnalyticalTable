@@ -13,7 +13,8 @@ File or Folder | Purpose
 
 ## Next Steps
 
-- Open a new terminal and run `cds watch`
+- Open a new terminal and run `cds watch`, then you can see total (sum) value of each columns.
+- When grouping by `Plant` and getting subtotal, click gear mark and configure grouping.
 
 ## Learn More
 
