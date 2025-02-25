@@ -18,11 +18,27 @@ annotate service.Items with @(
 }
 
 annotate service.Documents with @(
+    Aggregation.ApplySupported: { 
+        GroupableProperties: [
+            Name
+        ]
+    },
+    Aggregation.CustomAggregate #Numbers: 'Edm.Int32'
+){
+    Numbers @Analytics.Measure @Aggregation.default: #SUM;
+}
+
+annotate service.Documents with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
             Label : 'Name',
             Value : Name,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : Numbers,
+            Label : 'Numbers',
         },
     ]
 );
@@ -34,7 +50,7 @@ annotate service.Documents with @(
                 $Type : 'UI.DataField',
                 Label : 'Name',
                 Value : Name,
-            },
+            }
         ],
     },
     UI.Facets : [
@@ -72,3 +88,7 @@ annotate service.Items with @(
             Label : 'Weigh',
         },]
 );
+annotate service.Documents with {
+    Name @UI.MultiLineText : true
+};
+

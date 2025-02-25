@@ -4,6 +4,7 @@ entity Documents
 {
     key ID : UUID;
     Name : String(100);
+    Numbers: Int32;
     items : Composition of many Items on items.documents = $self;
 }
 

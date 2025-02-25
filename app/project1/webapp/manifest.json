@@ -133,7 +133,24 @@
                   }
                 }
               },
-              "initialLoad": "Enabled"
+              "initialLoad": "Enabled",
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "AnalyticalTable"
+                  },
+                  "columns": {
+                    "Field": {
+                      "header": "Field",
+                      "position": {
+                        "anchor": "DataField::Name",
+                        "placement": "After"
+                      },
+                      "template": "project1.ext.fragment.Field"
+                    }
+                  }
+                }
+              }
             }
           },
           "controlAggregation": "beginColumnPages",
@@ -158,6 +175,20 @@
                 "items/@com.sap.vocabularies.UI.v1.LineItem#Items": {
                   "tableSettings": {
                     "type": "AnalyticalTable"
+                  }
+                }
+              },
+              "content": {
+                "body": {
+                  "sections": {
+                    "Field2": {
+                      "template": "project1.ext.fragment.Field2",
+                      "position": {
+                        "placement": "Before",
+                        "anchor": "Items"
+                      },
+                      "title": "Field2"
+                    }
                   }
                 }
               }

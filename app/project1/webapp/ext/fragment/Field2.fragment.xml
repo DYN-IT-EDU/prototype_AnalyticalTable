@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros">
+	<VBox id="_IDGenVBox" core:require="{ handler: 'project1/ext/fragment/Field2'}">
+		<Input id="_IDGenInput2" type="Text"/>
+	</VBox>
+</core:FragmentDefinition>

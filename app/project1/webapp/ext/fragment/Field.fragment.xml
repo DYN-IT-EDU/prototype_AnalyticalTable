@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Input id="_IDGenInput" 
+		core:require="{ handler: 'project1/ext/fragment/Field'}" 
+		value="{customValue}"
+         type="Text"/>
+</core:FragmentDefinition>
