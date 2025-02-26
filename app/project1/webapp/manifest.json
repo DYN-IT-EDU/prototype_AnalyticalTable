@@ -106,15 +106,6 @@
             "DocumentsList",
             "DocumentsObjectPage"
           ]
-        },
-        {
-          "pattern": "Documents({key})/items({key2}):?query:",
-          "name": "ItemsObjectPage",
-          "target": [
-            "DocumentsList",
-            "DocumentsObjectPage",
-            "ItemsObjectPage"
-          ]
         }
       ],
       "targets": {
@@ -164,13 +155,7 @@
             "settings": {
               "editableHeaderContent": false,
               "contextPath": "/Documents",
-              "navigation": {
-                "items": {
-                  "detail": {
-                    "route": "ItemsObjectPage"
-                  }
-                }
-              },
+              "navigation": {},
               "controlConfiguration": {
                 "items/@com.sap.vocabularies.UI.v1.LineItem#Items": {
                   "tableSettings": {
@@ -196,19 +181,6 @@
           },
           "controlAggregation": "midColumnPages",
           "contextPattern": "/Documents({key})"
-        },
-        "ItemsObjectPage": {
-          "type": "Component",
-          "id": "ItemsObjectPage",
-          "name": "sap.fe.templates.ObjectPage",
-          "options": {
-            "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/Documents/items"
-            }
-          },
-          "controlAggregation": "endColumnPages",
-          "contextPattern": "/Documents({key})/items({key2})"
         }
       }
     },
